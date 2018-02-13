@@ -28,9 +28,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.webmarke8.app.gencart.Session.MyApplication;
-
 import java.io.ByteArrayOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -458,12 +456,8 @@ public class AppUtils {
 
     public static String nameFirstLatterCapitalize(String name) {
 
-        Log.d("name>>", name);
-
         String name1 = name;
         name1 = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
-        Log.d("nameCapitalized>>", name1);
-
         return name1;
     }
 
