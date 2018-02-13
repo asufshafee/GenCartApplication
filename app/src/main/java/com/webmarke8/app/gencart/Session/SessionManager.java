@@ -5,25 +5,17 @@ import android.content.SharedPreferences;
 
 
 public class SessionManager  {
-    public static String Key_MilkPrice = "ss";
-    public static String Key_SellMilkPrice = "aa";
-    public static String Key_AnimalMilkFilter = "none";
-    public static String PinNumber = "pin";
+
     Context mContext;
     static final String MyPREFERENCES = "MyPrefs";
     public static String KEY_UserID = "userID";
     public static String KEY_Mobile = "mob";
     public static String KEY_Email = "pass";
-    public static String KEY_Adhar = "adhar";
-    public static String KEY_Address = "address";
     public static String KEY_Name = "name";
-    public static String KEY_FatherName = "f_name";
     public static SharedPreferences sharedPreferences;
     public static SharedPreferences.Editor editor;
     private static final String IS_LOGIN = "IsLoggedIn";
     public static String Key_UserGroupID = "gID";
-    public static String Key_Status = "status";
-    public static String Key_pwd = "pwd";
 
 
     public void createLoginSession(String userID, String name, String email, String phone, String user_grooupID) {
