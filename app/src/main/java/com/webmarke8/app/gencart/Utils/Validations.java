@@ -47,7 +47,7 @@ public class Validations {
     }
 
 
-    public static boolean isValidEmail(EditText email, String error, TextInputLayout textInputLayout) {
+    public static boolean isValidEmail(EditText email, String error) {
         boolean val = false;
 
         if (android.util.Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
@@ -56,8 +56,8 @@ public class Validations {
 
         } else {
 
-            textInputLayout.setError(error);
-            //  textInputLayout.requestFocus();
+            email.setError(error);
+            email.requestFocus();
         }
         return val;
     }
@@ -97,7 +97,7 @@ public class Validations {
         return val;
     }
 
-    public static boolean isEditTextFilled(EditText name, String ErrorMsg) {
+    public static boolean isEmpity(EditText name, String ErrorMsg) {
 
         boolean val = false;
         String mob = name.getText().toString().trim();

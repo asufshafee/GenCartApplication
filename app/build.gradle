@@ -26,6 +26,7 @@ dependencies {
     compile 'com.intuit.sdp:sdp-android:1.0.3'
     compile 'com.android.support:design:26.1.0'
     compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.github.Guilherme-HRamos:Easy-Save:1.01'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }

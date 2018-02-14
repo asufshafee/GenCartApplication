@@ -1,15 +1,13 @@
-package com.webmarke8.app.gencart.Activities;
+package com.webmarke8.app.gencart;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.webmarke8.app.gencart.R;
-
-public class Store_Signup extends AppCompatActivity {
+public class Owner_Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_store__signup);
+        setContentView(R.layout.activity_owner__home);
     }
 }

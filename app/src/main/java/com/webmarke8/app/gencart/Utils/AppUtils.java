@@ -352,7 +352,7 @@ public class AppUtils {
 
 
 
-    public static void goNextClass(Context context, Class className) {
+    public static void StartActivity(Context context, Class className) {
 
         Intent intent = new Intent(context, className);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

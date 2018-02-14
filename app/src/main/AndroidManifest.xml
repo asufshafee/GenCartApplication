@@ -2,10 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.webmarke8.app.gencart">
 
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:name=".Session.MyApplication"
@@ -15,18 +13,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.Splash">
+        <activity
+            android:name=".Activities.SelectUserActivity"
+            android:theme="@style/AppFullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.SelectUserActivity" />
-        <activity android:name=".Activities.Customer_Login" />
-        <activity android:name=".Activities.Owner_Login" />
-        <activity android:name=".Activities.Customer_Signup" />
-        <activity android:name=".Activities.Store_Signup"></activity>
+        <activity
+            android:name=".Activities.Customer_Login"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".Activities.Owner_Login"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".Activities.Customer_Signup"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".Activities.Owner_Signup"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity android:name=".Owner_Home" />
+        <activity android:name=".Customer_Home"></activity>
     </application>
 
 </manifest>

@@ -8,11 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
+    <!--Progress Bar Theme-->
     <style name="MyProgressBarRectangle" parent="@style/Widget.AppCompat.ProgressBar">
         <item name="android:indeterminateDrawable">@drawable/pregress_view</item>
         <item name="android:minHeight">80dp</item>
         <item name="android:minWidth">200dp</item>
+    </style>
+
+
+    <!--Full Screen Theme-->
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>
