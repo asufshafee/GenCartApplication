@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GenCart</string>
+    <string name="facebook_app_id">401886810253632</string>
+    <string name="fb_login_protocol_scheme">2d46d29929225ff04885773dec31026e</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">AZnUTFzoNNYw8RYNX0etJPUOS</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">1CRJS1NioQ9Sx4u7xybM2qk8hNMoYqVKyCQ0LAvLX25N4kJTY7</string>
 </resources>

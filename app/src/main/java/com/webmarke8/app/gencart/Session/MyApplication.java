@@ -28,8 +28,8 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
-        editor= getSharedPreferences(MYPREFERENCES, MODE_PRIVATE).edit();
-        sharedPreferences=getSharedPreferences(MYPREFERENCES, MODE_PRIVATE);
+        editor = getSharedPreferences(MYPREFERENCES, MODE_PRIVATE).edit();
+        sharedPreferences = getSharedPreferences(MYPREFERENCES, MODE_PRIVATE);
 
     }
 
@@ -89,6 +89,12 @@ public class MyApplication extends Application {
     public String getType() {
         String value = sharedPreferences.getString("Type", null);
         return value;
+    }
+
+    public void setType(String Type) {
+
+        editor.putString("Type", Type);
+        editor.apply();
 
     }
 

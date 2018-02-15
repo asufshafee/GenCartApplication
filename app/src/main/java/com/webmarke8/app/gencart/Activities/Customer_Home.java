@@ -1,7 +1,9 @@
-package com.webmarke8.app.gencart;
+package com.webmarke8.app.gencart.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.webmarke8.app.gencart.R;
 
 public class Customer_Home extends AppCompatActivity {
 

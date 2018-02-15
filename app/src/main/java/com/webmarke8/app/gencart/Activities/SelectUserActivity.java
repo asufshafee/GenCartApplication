@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.webmarke8.app.gencart.Customer_Home;
-import com.webmarke8.app.gencart.Owner_Home;
 import com.webmarke8.app.gencart.R;
 import com.webmarke8.app.gencart.Session.MyApplication;
 import com.webmarke8.app.gencart.Utils.AppUtils;
+import com.webmarke8.app.gencart.Utils.StaticData;
 
 public class SelectUserActivity extends AppCompatActivity {
 
@@ -22,8 +21,7 @@ public class SelectUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_user);
 
         myApplication = (MyApplication) getApplicationContext();
-        Progress=(RelativeLayout)findViewById(R.id.Progress);
-
+        Progress = (RelativeLayout) findViewById(R.id.Progress);
 
 
         if (myApplication.isLoggedIn()) {
@@ -46,7 +44,9 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                myApplication.setType(StaticData.Owner);
                 AppUtils.StartActivity(getApplicationContext(), Owner_Login.class);
+
 
             }
         });
@@ -54,6 +54,7 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                myApplication.setType(StaticData.Customer);
                 AppUtils.StartActivity(getApplicationContext(), Customer_Login.class);
 
             }

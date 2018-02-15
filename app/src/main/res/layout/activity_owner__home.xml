@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.webmarke8.app.gencart.Owner_Home">
+    tools:context="com.webmarke8.app.gencart.Activities.Owner_Home">
 
 </android.support.constraint.ConstraintLayout>

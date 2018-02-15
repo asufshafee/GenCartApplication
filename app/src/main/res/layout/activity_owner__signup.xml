@@ -3,16 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".Activities.Owner_Signup"
     android:background="@drawable/android_bg"
     android:weightSum="15">
+
     <ScrollView
         android:layout_width="match_parent"
         android:scrollbars="vertical"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -34,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="for  Cusomter"
+            android:text="for  Owner"
             android:textColor="#6f716d"
             android:id="@+id/textView2" />
 
@@ -160,8 +163,7 @@
                     android:id="@+id/facebook"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/fb"
-                    />
+                    android:src="@drawable/fb"/>
                 <ImageView
                     android:id="@+id/twitter"
                     android:layout_width="50dp"
@@ -185,8 +187,8 @@
                     android:textStyle="bold"
                     android:layout_marginStart="84dp"
                     android:text="Already a member ?"
-                    android:layout_marginLeft="84dp"
-                    android:layout_alignParentLeft="true" />
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="84dp" />
 
                 <TextView
                     android:id="@+id/login"
@@ -214,7 +216,7 @@
         tools:ignore="Suspicious0dp">
 
     </LinearLayout>
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
 
