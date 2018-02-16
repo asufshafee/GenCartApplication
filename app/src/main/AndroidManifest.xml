@@ -13,7 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -27,11 +26,11 @@
         <activity
             android:name=".Activities.SelectUserActivity"
             android:theme="@style/AppFullScreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".Activities.Customer_Login"
@@ -45,8 +44,18 @@
         <activity
             android:name=".Activities.Owner_Signup"
             android:theme="@style/AppFullScreenTheme" />
-        <activity android:name=".Activities.Owner_Home" />
-        <activity android:name=".Activities.Customer_Home"></activity>
+        <activity
+            android:name=".Activities.Customer_Main"
+            android:label="@string/title_activity_customer__main"
+            android:theme="@style/AppTheme">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

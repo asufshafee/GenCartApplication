@@ -28,13 +28,13 @@ public class SelectUserActivity extends AppCompatActivity {
             if (myApplication.getType().equals("owner")) {
 
                 Progress.setVisibility(View.VISIBLE);
-                AppUtils.StartActivity(getApplicationContext(), Owner_Home.class);
+                AppUtils.StartActivity(getApplicationContext(), Customer_Main.class);
                 finish();
 
             } else {
 
                 Progress.setVisibility(View.VISIBLE);
-                AppUtils.StartActivity(getApplicationContext(), Customer_Home.class);
+                AppUtils.StartActivity(getApplicationContext(), Customer_Main.class);
                 finish();
 
             }
