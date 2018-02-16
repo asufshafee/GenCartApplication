@@ -44,7 +44,7 @@ public class MyCartFragment extends Fragment {
         RecyclerView.LayoutManager mLayoutManager;
         mLayoutManager = new LinearLayoutManager(getActivity());
         rvAllCategories.setLayoutManager(mLayoutManager);
-        LinearLayoutManager linearLayoutManage  = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager linearLayoutManage = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         rvAllCategories.setHasFixedSize(true);
         mAdapter = new CartRecyclerViewAdapter(getActivity(), StoreList);
         rvAllCategories.setAdapter(mAdapter);

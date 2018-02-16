@@ -3,6 +3,7 @@ package com.webmarke8.app.gencart.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ItemFragment extends Fragment {
+public class ItemFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
 
 
@@ -35,6 +36,8 @@ public class ItemFragment extends Fragment {
 
     FrameLayout Detail;
     ScrollView Scroll;
+
+    SwipeRefreshLayout mSwipeRefreshLayout;
 
 
     public ItemFragment() {
@@ -49,6 +52,15 @@ public class ItemFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_item, container, false);
         ProductList =new ArrayList<>();
 
+        mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.SwipeRefreshLayout);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary,
+                android.R.color.holo_green_dark,
+                android.R.color.holo_orange_dark,
+                android.R.color.holo_blue_dark);
+
+
+
         Scroll = (ScrollView) view.findViewById(R.id.Scroll);
 
         Detail = (FrameLayout) view.findViewById(R.id.Details);
@@ -61,5 +73,13 @@ public class ItemFragment extends Fragment {
         Gridview.setAdapter(GridViewAdapter);
         return view;
     }
+    @Override
+    public void onRefresh() {
+        mSwipeRefreshLayout.setRefreshing(true);
+        mSwipeRefreshLayout.setRefreshing(false);
+
+        // Fetching data from server
+    }
+
 
 }
