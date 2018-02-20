@@ -9,13 +9,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.webmarke8.app.gencart.Adapters.StoreRecyclerViewAdapter;
 import com.webmarke8.app.gencart.Objects.Store;
 import com.webmarke8.app.gencart.R;
 
 import java.util.List;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +28,7 @@ public class StoreFragment extends Fragment  implements SwipeRefreshLayout.OnRef
     List<Store> StoreList;
 
     SwipeRefreshLayout mSwipeRefreshLayout;
+    ProgressBar progressBar;
 
 
     public StoreFragment() {
@@ -41,6 +42,7 @@ public class StoreFragment extends Fragment  implements SwipeRefreshLayout.OnRef
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_store, container, false);
         rvAllCategories = view.findViewById(R.id.rv);
+        
 
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.SwipeRefreshLayout);

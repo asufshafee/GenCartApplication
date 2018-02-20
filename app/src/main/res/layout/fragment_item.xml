@@ -1,15 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.webmarke8.app.gencart.Fragments.ItemFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="@dimen/_5sdp"
         android:focusable="false"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -19,7 +21,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/rounded_white"
-            android:hint="Search"
+            android:hint="Witch item you are looking for?"
             android:lines="1"
             android:paddingEnd="5dp"
             android:paddingStart="10dp"
@@ -44,52 +46,54 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/Scroll"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/layout_border">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+
+        <ScrollView
+            android:id="@+id/Scroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="7"
+            android:background="#f4f4f4"
+            android:paddingTop="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:orientation="vertical">
 
-                <FrameLayout
-                    android:id="@+id/Details"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <FrameLayout
+                        android:id="@+id/Details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <com.webmarke8.app.gencart.Adapters.ExpandableHeightGridView
+                    android:id="@+id/gridview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="#f4f4f4"
+                    android:horizontalSpacing="10dp"
+                    android:isScrollContainer="false"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+
 
             </LinearLayout>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:padding="10dp">
-
-                <android.support.v4.widget.SwipeRefreshLayout
-                    android:id="@+id/SwipeRefreshLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.webmarke8.app.gencart.Adapters.ExpandableHeightGridView
-                        android:id="@+id/gridview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#FFFFFF"
-                        android:horizontalSpacing="1dp"
-                        android:isScrollContainer="false"
-                        android:numColumns="3"
-                        android:stretchMode="columnWidth" />
-                </android.support.v4.widget.SwipeRefreshLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

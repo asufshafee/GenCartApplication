@@ -28,6 +28,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
+import com.webmarke8.app.gencart.Fragments.ProductDetails;
 import com.webmarke8.app.gencart.Fragments.ProfileFragment;
 import com.webmarke8.app.gencart.Objects.Product;
 import com.webmarke8.app.gencart.R;
@@ -114,7 +115,7 @@ public class ItemGridviewAdapter extends BaseAdapter {
                 Fragment fragment = null;
                 Class fragmentClass = null;
 
-                fragmentClass = ProfileFragment.class;
+                fragmentClass = ProductDetails.class;
                 try {
                     fragment = (Fragment) fragmentClass.newInstance();
                     Bundle bundle = new Bundle();
